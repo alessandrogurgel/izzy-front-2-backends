@@ -1,18 +1,11 @@
 import { Observable } from 'rxjs';
 
-export interface User {
+export class User {
   name: string;
-  picture: string;
+  email: string;
+  password: string;
 }
 
-export interface Contacts {
-  user: User;
-  type: string;
-}
-
-export interface RecentUsers extends Contacts {
-  time: number;
-}
 
 export abstract class UserData {
   abstract getUsers(): Observable<User[]>;

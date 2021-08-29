@@ -1,0 +1,31 @@
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+/**
+ * @license
+ * Copyright Akveo. All Rights Reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
+ */
+ :host {
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+    img {
+      align-self: center;
+      height: 240px;
+    }
+  }
+
+  .title {
+    margin-bottom: 2rem;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .logo-container {
+      img {
+        height: 160px;
+      }
+    }
+  }
+
+}
