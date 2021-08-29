@@ -2,35 +2,77 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Dashboard',
+    title: 'Home',
     icon: 'home-outline',
     link: '/pages/dashboard',
     home: true,
   },
   {
-    title: 'FEATURES',
+    title: 'SAMPLE MINI APPLICATION',
     group: true,
   },
   {
-    title: 'Auth',
-    icon: 'lock-outline',
+    title: 'Companies',
+    icon: 'briefcase-outline',
+    link: '/pages/companies/'
+  },
+  {
+    title: 'Users',
+    icon: 'people-outline',
+    link: '/pages/dashboard'
+  },
+  {
+    title: 'Settings',
+    icon: 'settings-2-outline',
     children: [
       {
-        title: 'Login',
-        link: '/auth/login',
+        title: 'Permissions',
+        link: '/pages/settings/permissions',
       },
       {
-        title: 'Register',
-        link: '/auth/register',
+        title: 'Roles',
+        link: '/pages/settigns/roles',
+      }
+    ],
+  },
+  {
+    title: 'UI COMPONENTS',
+    group: true,
+  },
+  {
+    title: 'Ngx Formly UI',
+    icon: 'edit-2-outline',
+    children: [
+      {
+        title: 'Forms Input',
+        link: '/pages/forms/inputs', // select, checkbox, textare
       },
       {
-        title: 'Request Password',
-        link: '/auth/request-password',
+        title: 'Datepicker',
+        link: '/pages/forms/datepicker',
       },
       {
-        title: 'Reset Password',
-        link: '/auth/reset-password',
+        title: 'Stepper',
+        link:  '/pages/forms/stepper',
       },
+      {
+        title: 'Pannel',
+        link:  '/pages/forms/pannel',
+      },
+    ],
+  },
+  {
+    title: 'Custom NgxDataTable',
+    icon: 'grid-outline',
+    children: [
+      {
+        title: 'Basic',
+        link: '/pages/tables/basic',
+      },
+      {
+        title: 'Mobile',
+        link: '/pages/tables/mobile',
+      }
     ],
   },
 ];
