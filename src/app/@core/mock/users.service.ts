@@ -10,11 +10,6 @@ export class UserService extends UserData {
   private users = {
     admin: { name: 'Admin' }
   };
-  private types = {
-    mobile: 'mobile',
-    home: 'home',
-    work: 'work',
-  };
 
   getUsers(): Observable<any> {
     return observableOf(this.users);

@@ -5,6 +5,10 @@
     </a>
     <a class="logo" href="#" (click)="navigateHome()">izzyfront</a>
   </div>
+  <nb-select [selected]="currentLanguage" (selectedChange)="changeLanguage($event)" status="primary">
+    <nb-option value="pt-BR">Brasil (pt-BR)</nb-option>
+    <nb-option value="es-MX">Mexico (es-MX)</nb-option>
+  </nb-select>
 </div>
 
 <div class="header-container">

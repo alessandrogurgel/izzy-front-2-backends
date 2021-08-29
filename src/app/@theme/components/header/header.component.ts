@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   private destroy$: Subject<void> = new Subject<void>();
   userPictureOnly: boolean = false;
   user: any;
-  currentTheme = 'default';
+  currentLanguage = 'pt-BR';
 
   userMenu = [ { title: 'Profile' }, { title: 'Log out' } ];
 
@@ -48,8 +48,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  changeTheme(themeName: string) {
-    this.themeService.changeTheme(themeName);
+  changeLanguage(language: string) {
+    alert(`TODO: handle change language to ${language}`);
   }
 
   toggleSidebar(): boolean {
