@@ -4,6 +4,7 @@ import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeServ
 import { UserData } from '../../../@core/data/users';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
+import { environment } from 'environments/environment';
 
 @Component({
   selector: 'ngx-header',
@@ -27,7 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.themeService.changeTheme('dark');
+    this.themeService.changeTheme(environment.theme);
 
     this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))
