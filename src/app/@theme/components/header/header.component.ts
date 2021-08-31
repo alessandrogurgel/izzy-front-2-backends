@@ -5,6 +5,8 @@ import { UserData } from '../../../@core/data/users';
 import { map, takeUntil } from 'rxjs/operators';
 import { Subject } from 'rxjs';
 import { environment } from 'environments/environment';
+import { LoginService } from 'app/services/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'ngx-header',
@@ -24,6 +26,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private menuService: NbMenuService,
               private themeService: NbThemeService,
               private userService: UserData,
+              private loginService: LoginService,
+              private router: Router,
               private breakpointService: NbMediaBreakpointsService) {
   }
 
@@ -41,6 +45,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
+
+      this.menuService.onItemClick().subscribe((event) => {
+        debugger;
+        this.onMenuItemSelection(event.item.title);
+      })
 
   }
 
@@ -62,5 +71,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   navigateHome() {
     this.menuService.navigateHome();
     return false;
+  }
+
+  private onMenuItemSelection(title) {
+    if (title === 'Log out') {
+      this.logout();
+    }
+  }
+
+  private logout() {
+    this.loginService.signOut();
+    this.router.navigate(['authenticate', 'login']);
   }
 }
