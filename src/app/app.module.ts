@@ -20,6 +20,8 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import { FormlyModule } from '@ngx-formly/core';
+import { NbFormlyCheckboxComponent } from 'nebular-formly';
 
 @NgModule({
   declarations: [AppComponent],
@@ -39,6 +41,14 @@ import {
     }),
     CoreModule.forRoot(),
     ThemeModule.forRoot(),
+    FormlyModule.forRoot({
+      validationMessages: [
+        { name: 'required', message: 'This field is required' },
+      ],
+      types: [
+        { name: 'nbCheckbox', component: NbFormlyCheckboxComponent }
+      ]
+    }),
   ],
   bootstrap: [AppComponent],
 })
