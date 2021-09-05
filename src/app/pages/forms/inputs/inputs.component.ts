@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
 
@@ -23,6 +23,7 @@ export class InputsComponent implements OnInit {
   }
   private defineDisplayCode() {
     // extracted from markdown in https://markdowntohtml.com/
+    // custom css in typescript_code.scss
     this.htmlCode = `
       <pre><code class="lang-ts">
       this<span class="hljs-selector-class">.fields</span> = [

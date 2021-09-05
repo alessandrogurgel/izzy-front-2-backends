@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { InputsComponent } from './inputs/inputs.component';
 import { NbFormlyCheckboxModule } from 'nebular-formly';
 import { FormlyModule } from '@ngx-formly/core';
-import { NbCardModule, NbIconModule } from '@nebular/theme';
+import { NbCardModule, NbIconModule, NbAccordionModule } from '@nebular/theme';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { SharedModule } from 'app/shared/shared.module';
 
@@ -18,7 +18,8 @@ import { SharedModule } from 'app/shared/shared.module';
     NbFormlyCheckboxModule,
     FormlyModule,
     SharedModule,
-    NbIconModule
+    NbIconModule,
+    NbAccordionModule
   ]
 })
 export class FormsModule { }

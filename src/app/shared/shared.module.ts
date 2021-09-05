@@ -3,18 +3,20 @@ import { CommonModule } from '@angular/common';
 import { LogoComponent } from './logo/logo.component';
 import { TypescriptCodeComponent } from './typescript-code/typescript-code.component';
 import { NbCardModule } from '@nebular/theme';
+import { FormDebugComponent } from './form-debug/form-debug.component';
 
 
 
 @NgModule({
-  declarations: [LogoComponent, TypescriptCodeComponent],
+  declarations: [LogoComponent, TypescriptCodeComponent, FormDebugComponent],
   imports: [
     CommonModule,
     NbCardModule
   ],
   exports: [
     LogoComponent,
-    TypescriptCodeComponent
+    TypescriptCodeComponent,
+    FormDebugComponent
   ]
 })
 export class SharedModule { }
