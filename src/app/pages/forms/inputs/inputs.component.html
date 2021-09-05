@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Form Layout</nb-card-header>
+      <nb-card-body>
+        <formly-form
+        [form]="form"
+        [model]="model"
+        [fields]="fields">
+      </formly-form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Form Schema</nb-card-header>
+      <div>
+        <typescript-code [htmlCode]="htmlCode"></typescript-code>
+      </div>
+      <nb-card-footer>
+        Code: <a href="https://google.com"><nb-icon [icon]="'link-2-outline'"></nb-icon></a>
+      </nb-card-footer>
+    </nb-card>
+  </div>
+</div>

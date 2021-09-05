@@ -48,7 +48,7 @@ import { NbFormlyCheckboxComponent } from 'nebular-formly';
       types: [
         { name: 'nbCheckbox', component: NbFormlyCheckboxComponent }
       ]
-    }),
+    })
   ],
   bootstrap: [AppComponent],
 })

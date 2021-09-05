@@ -47,7 +47,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
 
       this.menuService.onItemClick().subscribe((event) => {
-        debugger;
         this.onMenuItemSelection(event.item.title);
       })
 
