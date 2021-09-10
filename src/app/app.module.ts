@@ -11,6 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NbFormlyCheckboxComponent, NbFormlyInputComponent } from 'nebular-formly';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -21,7 +22,8 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import { FormlyModule } from '@ngx-formly/core';
-import { NbFormlyCheckboxComponent } from 'nebular-formly';
+
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [AppComponent],
@@ -46,9 +48,11 @@ import { NbFormlyCheckboxComponent } from 'nebular-formly';
         { name: 'required', message: 'This field is required' },
       ],
       types: [
-        { name: 'nbCheckbox', component: NbFormlyCheckboxComponent }
+        { name: 'nbCheckbox', component: NbFormlyCheckboxComponent },
+        { name: 'nbInput', component: NbFormlyInputComponent },
       ]
-    })
+    }),
+    NgxMaskModule.forRoot(),
   ],
   bootstrap: [AppComponent],
 })

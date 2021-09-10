@@ -25,17 +25,53 @@ export class InputsComponent implements OnInit {
     // extracted from markdown in https://markdowntohtml.com/
     // custom css in typescript_code.scss
     this.htmlCode = `
-      <pre><code class="lang-ts">
-      this<span class="hljs-selector-class">.fields</span> = [
-            {
-              key: <span class="hljs-string">'teste'</span>,
-              type: <span class="hljs-string">'nbCheckbox'</span>,
-              templateOptions: {
-                <span class="hljs-selector-tag">label</span>: <span class="hljs-string">'Teste Checkbox'</span>
-              }
-            }
-      ]
-      </code></pre>
+    <pre><code class="lang-ts">[
+      {
+        key: <span class="hljs-symbol">'checked</span>',
+        type: <span class="hljs-symbol">'nbCheckbox</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Checked</span>'
+        }
+      },
+      {
+        key: <span class="hljs-symbol">'basicInput</span>',
+        type: <span class="hljs-symbol">'nbInput</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Basic</span> Input',
+          required: true
+        }
+      },
+      {
+        key: <span class="hljs-symbol">'inputMask</span>',
+        type: <span class="hljs-symbol">'nbInput</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Input</span> w/ mask',
+          mask: <span class="hljs-string">"(00) 00000-0000"</span>,
+          placeholder: <span class="hljs-string">"(00) 00000-0000"</span>
+        }
+      },
+      {
+        key: <span class="hljs-symbol">'minMaxInput</span>',
+        type: <span class="hljs-symbol">'nbInput</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Input</span> w/ min max',
+          type: <span class="hljs-symbol">'number</span>',
+          min: <span class="hljs-number">0</span>,
+          max: <span class="hljs-number">100</span>
+        }
+      },
+      {
+        key: <span class="hljs-symbol">'patternInput</span>',
+        type: <span class="hljs-symbol">'nbInput</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Input</span> with pattern',
+          placeholder: <span class="hljs-symbol">'Ex</span> @example.org',
+          pattern: <span class="hljs-symbol">'.+@.+</span>\..+'
+        }
+      },
+]<span class="hljs-comment">;</span>
+</code></pre>
+
     `
   }
 
@@ -43,12 +79,48 @@ export class InputsComponent implements OnInit {
   private specifyFormlyFields() {
     this.fields = [
       {
-        key: 'teste',
+        key: 'checked',
         type: 'nbCheckbox',
         templateOptions: {
-          label: 'Teste Checkbox'
+          label: 'Checked'
         }
-      }
+      },
+      {
+        key: 'basicInput',
+        type: 'nbInput',
+        templateOptions: {
+          label: 'Basic Input',
+          required: true
+        }
+      },
+      {
+        key: 'inputMask',
+        type: 'nbInput',
+        templateOptions: {
+          label: 'Input w/ mask',
+          mask: "(00) 00000-0000",
+          placeholder: "(00) 00000-0000"
+        }
+      },
+      {
+        key: 'minMaxInput',
+        type: 'nbInput',
+        templateOptions: {
+          label: 'Input w/ min max',
+          type: 'number',
+          min: 0,
+          max: 100
+        }
+      },
+      {
+        key: 'patternInput',
+        type: 'nbInput',
+        templateOptions: {
+          label: 'Input with pattern',
+          placeholder: 'Ex @example.org',
+          pattern: '.+@.+\..+'
+        }
+      },
     ];
   }
 
