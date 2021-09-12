@@ -121,6 +121,21 @@ export class InputsComponent implements OnInit {
           pattern: '.+@.+\..+'
         }
       },
+      {
+        key: 'selection',
+        type: 'nbSelect',
+        templateOptions: {
+          label: 'Static Select',
+          options: [
+            { label: 'Option 1', value: 1 },
+            { label: 'Option 2', value: 2 },
+            { label: 'Option 3', value: 3 },
+          ],
+          change: (field, value) => {
+           this.model.selection = value;
+          }
+        }
+      },
     ];
   }
 

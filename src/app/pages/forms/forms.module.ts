@@ -6,7 +6,7 @@ import { NbCardModule, NbIconModule, NbAccordionModule } from '@nebular/theme';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
-import { NbFormlyCheckboxModule, NbFormlyInputModule } from 'nebular-formly';
+import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, PipesModule } from 'nebular-formly';
 
 
 @NgModule({
@@ -17,6 +17,7 @@ import { NbFormlyCheckboxModule, NbFormlyInputModule } from 'nebular-formly';
     CommonModule,
     NbFormlyCheckboxModule,
     NbFormlyInputModule,
+    NbFormlySelectModule,
     FormlyModule,
     SharedModule,
     NbIconModule,

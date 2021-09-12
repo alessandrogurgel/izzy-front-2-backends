@@ -11,7 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NbFormlyCheckboxComponent, NbFormlyInputComponent } from 'nebular-formly';
+import { NbFormlyCheckboxComponent, NbFormlyInputComponent, NbFormlySelectComponent } from 'nebular-formly';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -50,6 +50,7 @@ import { NgxMaskModule } from 'ngx-mask';
       types: [
         { name: 'nbCheckbox', component: NbFormlyCheckboxComponent },
         { name: 'nbInput', component: NbFormlyInputComponent },
+        { name: 'nbSelect', component: NbFormlySelectComponent },
       ]
     }),
     NgxMaskModule.forRoot(),
