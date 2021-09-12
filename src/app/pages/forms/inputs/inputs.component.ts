@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { FormlyFieldConfig } from '@ngx-formly/core';
+import { GorestUsersService } from 'app/services/gorest-users.service';
 
 @Component({
   selector: 'inputs',
@@ -14,6 +15,9 @@ export class InputsComponent implements OnInit {
   model: any = null;
 
   htmlCode : string = null;
+
+  constructor(private gorestUsers : GorestUsersService) {
+  }
 
   ngOnInit(): void {
     this.defineInitialModelData();
@@ -69,8 +73,38 @@ export class InputsComponent implements OnInit {
           pattern: <span class="hljs-symbol">'.+@.+</span>\..+'
         }
       },
-]<span class="hljs-comment">;</span>
+      {
+        key: <span class="hljs-symbol">'selection</span>',
+        type: <span class="hljs-symbol">'nbSelect</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Static</span> Select',
+          options: [
+            { label: <span class="hljs-symbol">'Option</span> <span class="hljs-number">1</span>', value: <span class="hljs-number">1</span> },
+            { label: <span class="hljs-symbol">'Option</span> <span class="hljs-number">2</span>', value: <span class="hljs-number">2</span> },
+            { label: <span class="hljs-symbol">'Option</span> <span class="hljs-number">3</span>', value: <span class="hljs-number">3</span> },
+          ],
+          change: (<span class="hljs-name"><span class="hljs-builtin-name">field</span></span>, value) =&gt; {
+           this.model.selection = value<span class="hljs-comment">;</span>
+          }
+        }
+      },
+      {
+        key: <span class="hljs-symbol">'remoteSelection</span>',
+        type: <span class="hljs-symbol">'nbSelect</span>',
+        templateOptions: {
+          label: <span class="hljs-symbol">'Dynamic</span> User Select',
+          options: this.gorestUsers.getUsers(),
+          valueProp: <span class="hljs-symbol">'id</span>',
+          labelProp: <span class="hljs-symbol">'name</span>',
+          multiple: true,
+          change: (<span class="hljs-name"><span class="hljs-builtin-name">field</span></span>, value) =&gt; {
+           this.model.remoteSelection = value<span class="hljs-comment">;</span>
+          }
+        }
+      },
+    ]<span class="hljs-comment">;</span>
 </code></pre>
+
 
     `
   }
@@ -136,12 +170,26 @@ export class InputsComponent implements OnInit {
           }
         }
       },
+      {
+        key: 'remoteSelection',
+        type: 'nbSelect',
+        templateOptions: {
+          label: 'Dynamic User Select',
+          options: this.gorestUsers.getUsers(),
+          valueProp: 'id',
+          labelProp: 'name',
+          multiple: true,
+          change: (field, value) => {
+           this.model.remoteSelection = value;
+          }
+        }
+      },
     ];
   }
 
   private defineInitialModelData() {
     this.model = {
-      teste: false
+      checked: false
     };
   }
 }

@@ -2,6 +2,10 @@
   color: #e96900;
 }
 
-.hljs-string, .hljs-selector-class{
+.hljs-string, .hljs-symbol, .hljs-selector-class{
  color: #1976d2;
+}
+
+.code-panel pre {
+  max-height: 300px;
 }

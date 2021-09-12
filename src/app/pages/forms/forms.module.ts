@@ -7,7 +7,7 @@ import { ThemeModule } from 'app/@theme/theme.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
 import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, PipesModule } from 'nebular-formly';
-
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [InputsComponent],
@@ -22,6 +22,7 @@ import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, Pipe
     SharedModule,
     NbIconModule,
     NbAccordionModule,
+    HttpClientModule,
     NgxMaskModule.forChild()
   ]
 })
