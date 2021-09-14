@@ -1,0 +1,41 @@
+<div class="row">
+  <div class="col-lg-6">
+    <nb-card>
+      <nb-card-header>Form Layout</nb-card-header>
+      <nb-card-body>
+        <formly-form
+        [form]="form"
+        [model]="model"
+        [fields]="fields">
+      </formly-form>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-6">
+    <nb-accordion>
+      <nb-accordion-item [expanded]="true">
+        <nb-accordion-item-header>
+          Form Schema
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div>
+            <typescript-code [htmlCode]="htmlCode"></typescript-code>
+          </div>
+          <div>
+            Code: <a href="https://github.com/alessandrogurgel/izzy-front-2-backends/blob/master/src/app/pages/forms/panels/panels.component.ts"><nb-icon [icon]="'link-2-outline'"></nb-icon></a>
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+      <nb-accordion-item>
+        <nb-accordion-item-header>
+          Debug
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          <div>
+            <form-debug [form]="form" [model]="model"></form-debug>
+          </div>
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+    </nb-accordion>
+  </div>
+</div>

@@ -44,20 +44,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'edit-2-outline',
     children: [
       {
-        title: 'Forms Input',
+        title: 'Forms Inputs',
         link: '/pages/forms/inputs', // select, checkbox, textare
       },
       {
-        title: 'Datepicker',
+        title: 'Datepickers',
         link: '/pages/forms/datepickers',
       },
       {
-        title: 'Stepper',
+        title: 'Steppers',
         link:  '/pages/forms/steppers',
       },
       {
-        title: 'Pannel',
-        link:  '/pages/forms/pannels',
+        title: 'Panels',
+        link:  '/pages/forms/panels',
       },
     ],
   },

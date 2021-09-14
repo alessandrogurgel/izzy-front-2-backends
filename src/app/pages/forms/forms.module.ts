@@ -9,9 +9,10 @@ import { NgxMaskModule } from 'ngx-mask';
 import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, PipesModule, NbFormlyDatepickerModule } from 'nebular-formly';
 import { HttpClientModule } from '@angular/common/http';
 import { DatepickersComponent } from './datepickers/datepickers.component';
+import { PanelsComponent } from './panels/panels.component';
 
 @NgModule({
-  declarations: [InputsComponent, DatepickersComponent],
+  declarations: [InputsComponent, DatepickersComponent, PanelsComponent],
   imports: [
     NbCardModule,
     ThemeModule,
