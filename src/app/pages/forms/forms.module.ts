@@ -6,11 +6,12 @@ import { NbCardModule, NbIconModule, NbAccordionModule } from '@nebular/theme';
 import { ThemeModule } from 'app/@theme/theme.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { NgxMaskModule } from 'ngx-mask';
-import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, PipesModule } from 'nebular-formly';
+import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, PipesModule, NbFormlyDatepickerModule } from 'nebular-formly';
 import { HttpClientModule } from '@angular/common/http';
+import { DatepickersComponent } from './datepickers/datepickers.component';
 
 @NgModule({
-  declarations: [InputsComponent],
+  declarations: [InputsComponent, DatepickersComponent],
   imports: [
     NbCardModule,
     ThemeModule,
@@ -18,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     NbFormlyCheckboxModule,
     NbFormlyInputModule,
     NbFormlySelectModule,
+    NbFormlyDatepickerModule,
     FormlyModule,
     SharedModule,
     NbIconModule,

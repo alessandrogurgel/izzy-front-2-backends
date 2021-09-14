@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InputsComponent } from './forms/inputs/inputs.component';
+import { DatepickersComponent } from './forms/datepickers/datepickers.component';
 
 const routes: Routes = [{
   path: '',
@@ -21,6 +22,10 @@ const routes: Routes = [{
     {
       path: 'forms/inputs',
       component: InputsComponent
+    },
+    {
+      path: 'forms/datepickers',
+      component: DatepickersComponent
     },
   ],
 }];

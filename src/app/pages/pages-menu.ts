@@ -49,15 +49,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Datepicker',
-        link: '/pages/forms/datepicker',
+        link: '/pages/forms/datepickers',
       },
       {
         title: 'Stepper',
-        link:  '/pages/forms/stepper',
+        link:  '/pages/forms/steppers',
       },
       {
         title: 'Pannel',
-        link:  '/pages/forms/pannel',
+        link:  '/pages/forms/pannels',
       },
     ],
   },
