@@ -6,6 +6,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { InputsComponent } from './forms/inputs/inputs.component';
 import { DatepickersComponent } from './forms/datepickers/datepickers.component';
 import { PanelsComponent } from './forms/panels/panels.component';
+import { SteppersComponent } from './forms/steppers/steppers.component';
 
 const routes: Routes = [{
   path: '',
@@ -31,6 +32,10 @@ const routes: Routes = [{
     {
       path: 'forms/panels',
       component: PanelsComponent
+    },
+    {
+      path: 'forms/steppers',
+      component: SteppersComponent
     },
   ],
 }];

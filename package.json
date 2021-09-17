@@ -52,7 +52,7 @@
     "intl": "1.2.5",
     "ionicons": "2.0.1",
     "lodash": "^4.17.21",
-    "nebular-formly": "0.0.9",
+    "nebular-formly": "0.0.10",
     "nebular-icons": "1.1.0",
     "ngx-mask": "^11.1.4",
     "node-sass": "^4.14.1",

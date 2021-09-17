@@ -10,9 +10,11 @@ import { NbFormlyCheckboxModule, NbFormlyInputModule, NbFormlySelectModule, Pipe
 import { HttpClientModule } from '@angular/common/http';
 import { DatepickersComponent } from './datepickers/datepickers.component';
 import { PanelsComponent } from './panels/panels.component';
+import { SteppersComponent } from './steppers/steppers.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [InputsComponent, DatepickersComponent, PanelsComponent],
+  declarations: [InputsComponent, DatepickersComponent, PanelsComponent, SteppersComponent],
   imports: [
     NbCardModule,
     ThemeModule,
@@ -26,7 +28,8 @@ import { PanelsComponent } from './panels/panels.component';
     NbIconModule,
     NbAccordionModule,
     HttpClientModule,
-    NgxMaskModule.forChild()
+    NgxMaskModule.forChild(),
+    ReactiveFormsModule
   ]
 })
 export class FormsModule { }

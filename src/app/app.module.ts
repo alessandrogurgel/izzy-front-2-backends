@@ -11,7 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { NbFormlyCheckboxComponent, NbFormlyInputComponent, NbFormlySelectComponent, NbFormlyDatepickerComponent, NbFormlyWrapperPanelComponent } from 'nebular-formly';
+import { NbFormlyCheckboxComponent, NbFormlyInputComponent, NbFormlySelectComponent, NbFormlyDatepickerComponent, NbFormlyWrapperPanelComponent, NbFormlyWrapperStepperComponent } from 'nebular-formly';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -52,6 +52,7 @@ import { NgxMaskModule } from 'ngx-mask';
         { name: 'nbInput', component: NbFormlyInputComponent },
         { name: 'nbSelect', component: NbFormlySelectComponent },
         { name: 'nbDatepicker', component: NbFormlyDatepickerComponent },
+        { name: 'nbStepper', component: NbFormlyWrapperStepperComponent },
       ],
       wrappers: [
         { name: 'nbPanel', component: NbFormlyWrapperPanelComponent }
