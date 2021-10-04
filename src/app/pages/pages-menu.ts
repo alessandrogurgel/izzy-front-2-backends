@@ -40,7 +40,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'Ngx Formly UI',
+    title: 'Nebular Formly',
     icon: 'edit-2-outline',
     children: [
       {
